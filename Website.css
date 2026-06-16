@@ -194,37 +194,40 @@ footer
 	margin:20px;
 
 }
-.Product
-{
-background: white;
-width:250px;
-margin:15px;
+@media screen and (max-width:1024px){
+	main{
+		grid-template-columns:200px 1fr; }
 }
 
-@media screen and(max-width:768px){
-.Product{
-width:45%
+@media screen and (max-width:768px) {
+	header{
+		flex-direction:column;
+		gap:15px;
+	}
+
+	main {
+		grid-template-columns:1fr;
+	}
+	.sidebar {
+		height:auto;
+	}
 }
 
-main{
-grid-template-columns:1fr;
+@media screen and (max-width: 480px) {
+	.menu {
+		flex-direction: column;
+		gap: 10px;
+		align-items: center;
+	}
 
-  }
+	.slider {
+		height: 250px;
+	}
+
+	.product {
+		width:100;
+		margin: 10px 0;
+	}
 }
 
-@media screen and(max-width:480px){
-     .Product{
-     	width:90%;
 
- }
-
- .menu{
- 	flex-direction: column;
- 	align-items: center;
- }
-
-main{
-grid-template-columns::1fr;
-
-  }
-}
